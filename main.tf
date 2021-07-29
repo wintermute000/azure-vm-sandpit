@@ -123,6 +123,7 @@ resource "azurerm_public_ip" "ubuntu" {
   resource_group_name = azurerm_resource_group.ubuntu.name
   location            = azurerm_resource_group.ubuntu.location
   allocation_method   = "Dynamic"
+  domain_name_label   = "ubuntu-vm-${count.index}"
 
   tags = {
     Name = "Johann Lo"
